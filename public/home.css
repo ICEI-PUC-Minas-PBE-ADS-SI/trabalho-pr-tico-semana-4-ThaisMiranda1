@@ -20,7 +20,7 @@ body {
 .banner img {
     width: 100%; /* Faz a imagem ocupar 100% da largura do contêiner */
     height: auto; /* Mantém a proporção da imagem */
-    max-height: 50rem; /* Define uma altura máxima para a imagem */
+    max-height: 60rem; /* Define uma altura máxima para a imagem */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     border-radius: 15px;
     overflow: hidden;
@@ -64,7 +64,7 @@ header {
 .logo {
     display: flex;
     align-items: center;
-    box-shadow: 0 4px 15px rgba(34, 3, 3, 0.3);
+    box-shadow: 0 4px 15px rgba(32, 1, 1, 0.3);
 }
 
 .logo img {
@@ -84,7 +84,7 @@ header {
     align-items: center;
     padding: 0.5rem;
     border-radius: 8px;
-    border: 1px solid #000;
+    border: 1px solid #090808;
     gap: 1rem;
     color: #A12B2D;
     padding: 10px;
@@ -93,14 +93,14 @@ header {
 .menu-pesquisa:hover {
     display: flex;
     background-color: rgb(5, 146, 104);
-    color: black;
+    color: rgb(10, 1, 1);
     gap: 1rem;
   }
 
 .menu-pesquisa:active {
     display: flex;
     background-color:#F7F2EB;
-    color: yellow;
+    color: rgb(240, 240, 13);
     gap: 1rem;
 }  
 
@@ -116,7 +116,7 @@ nav ul {
 }
 
 nav ul li a {
-    border: 1px solid #090003;
+    border: 1px solid #050505;
     border-radius: 12px;
     padding: 1.31rem;
     text-decoration: none;
@@ -128,7 +128,7 @@ nav ul li a {
 .caixa-pesquisa {
     display: flex;
     align-items: center;
-    border: 1px solid #000;
+    border: 1px solid #000000;
     padding: 0.5rem;
     border-radius: 0.5rem;
     background-color: rgb(255, 255, 255);
