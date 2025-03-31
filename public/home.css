@@ -1,0 +1,379 @@
+/* ESTRUTURA */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: velista;
+    margin: 0;
+    padding: 0;
+    background-color: #F7F2EB;
+}
+
+.banner {
+    text-align: center; /* Centraliza a imagem */
+    margin-top: 1px; /* Espaçamento acima do banner */
+}
+
+.banner img {
+    width: 100%; /* Faz a imagem ocupar 100% da largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 50rem; /* Define uma altura máxima para a imagem */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s; /* Adiciona uma transição suave para o efeito */
+}
+
+.banner img:hover {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+}
+
+
+/*@keyframes scrollText {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}*/
+
+/*.marquee { ---> Futuras atualizações.
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: scrollText 5s infinite;
+    font-size: 24px;
+    font-weight: bold;
+}*/
+
+/* Estilos do Cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #205834;
+    padding: 15px 30px;
+    color: rgb(255, 255, 255);
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(34, 3, 3, 0.3);
+}
+
+.logo img {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+}
+
+/* Menu e pesquisa */
+.menu-pesquisa {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #000;
+    gap: 1rem;
+    color: #A12B2D;
+    padding: 10px;
+}
+
+.menu-pesquisa:hover {
+    display: flex;
+    background-color: rgb(5, 146, 104);
+    color: black;
+    gap: 1rem;
+  }
+
+.menu-pesquisa:active {
+    display: flex;
+    background-color:#F7F2EB;
+    color: yellow;
+    gap: 1rem;
+}  
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+}
+
+nav ul li a {
+    border: 1px solid #090003;
+    border-radius: 12px;
+    padding: 1.31rem;
+    text-decoration: none;
+    color: #205834;
+    background-color: #F7F2EB;
+}
+
+/* Pesquisa */
+.caixa-pesquisa {
+    display: flex;
+    align-items: center;
+    border: 1px solid #000;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: rgb(255, 255, 255);
+}
+
+.texto-pesquisa {
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.caixa-pesquisa button {
+    margin-left: 0.5rem;
+    cursor: pointer;
+    border: none;
+    background-color:#205834;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+
+/* Estilos do Conteúdo Principal */
+main {
+    text-align: left;
+    padding: 2rem;
+}
+
+main h1 {
+    color: #A12B2D;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: velista;
+}
+
+h4{
+    font-family: velista;
+    color: #A12B2D;
+    font-size: 1.5rem;
+    text-align: left;
+
+}
+
+main p {
+    color: black;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/*Conteiner*/
+.caixa-post {
+    border: 2.2px solid #205834;
+    padding: 1rem;
+    border-radius: 17px; /* Arredonda o container */
+    overflow: hidden; /* Garante que a imagem não ultrapasse o container arredondado */
+    background-color: #72A66A; /* Opcional: adiciona um fundo suave para destacar */
+}
+
+.caixa-post img {
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 15px; /* Arredonda os cantos do contêiner */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s; /* Adiciona uma transição suave para o efeito */
+
+}
+
+.caixa-post img:hover{
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+}
+
+.subtitulo {
+    font-weight: bold;
+}
+
+a {
+    color: #3333e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.2vh; /* Ajuste conforme necessário */
+
+}
+
+/* Estilos do Rodapé */
+footer {
+    background-color: #205834;
+    color: #F2DAC4;
+    text-align: center;
+    padding: 1rem;
+    border-top: 2px solid #000000;
+}
+
+
+/*Breakpoints para resoluções específicas(smartphones, tablets, dispositivos pequenos)*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+/* Breakpoints para tablets (até px) */
+@media screen and (max-width: 600px) {
+    header {
+        display: flex; /* Usar flexbox para alinhamento */
+        align-items: center;
+        justify-content: center; /* Centraliza os itens horizontalmente */
+        padding: 10px;
+        text-align: center;
+        background-color: #205834; /* Cor de fundo */
+        font-size: 1.2em; /* Tamanho da fonte */
+    }
+
+    .logo img {
+        width: 79px; /* Tamanho da logo */
+        padding: 0.1rem;
+    }
+
+    .menu-pesquisa {
+        display: flex; /* Certifique-se de que o flexbox está ativado */
+        flex-direction: column; /* Direção da coluna */
+        width: 100%;
+        padding: 7px;
+        text-align: center;
+    }
+
+    nav {
+        display: flex; /* Certifique-se de que o flexbox está ativado */
+        flex-direction: block; /* Direção da coluna */
+        width: 90%;
+        align-items: center;
+        gap: 1.5rem; /* Espaçamento entre os itens */
+    }
+
+    nav ul {
+        width: 90%;
+        padding: 0;
+        text-align: center;
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%; /* Largura total para cada item */
+    }
+
+    nav ul li a {
+        padding: 1rem; /* Espaçamento interno */
+        font-size: 15px; /* Tamanho da fonte */
+        width: 110%; /* Largura total do link */
+        display: flex; /* Para que o link ocupe toda a área do item */
+    }
+
+    .caixa-pesquisa {
+        width: 90%;
+        padding: 0.5rem;
+        justify-content: center;
+    }
+
+    main {
+        padding: 1rem; /* Espaçamento interno do main */
+    }
+
+    main h1 {
+        font-size: 2rem; /* Tamanho do título */
+    }
+
+    h4 {
+        font-size: 1.2rem; /* Tamanho do subtítulo */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    main p {
+        font-size: 1rem; /* Tamanho do parágrafo */
+    }
+
+    section {
+        display: grid; /* Certifique-se de que o grid está ativado */
+        grid-template-columns: 1fr; /* Uma coluna */
+        padding: 30px; /* Espaçamento interno */
+    }
+
+    .caixa-post {
+        padding: 0.9rem; /* Espaçamento interno da caixa de post */
+        margin: auto; /* Centraliza a caixa de post */
+    }
+
+    .caixa-post img {
+        height: 15rem; /* Altura da imagem */
+        max-width: 100%; /* Largura máxima da imagem */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+    footer {
+        padding: 2rem; /* Espaçamento interno do footer */
+        font-size: 20px; /* Tamanho da fonte do footer */
+        text-align: center;
+    }
+}
+
+/* Breakpoints para desktops (até 1200px)*/
+@media screen and (max-width: 1200px) {
+    header {
+        padding: 20px;
+    }
+    
+    .logo img {
+        width: 120px;
+    }
+    
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    main {
+        padding: 2rem;
+    }
+    
+    main h1 {
+        font-size: 3rem;
+    }
+    
+    main p {
+        font-size: 1.2rem;
+    }
+}
