@@ -19,14 +19,12 @@ Versão 2.0: Refatoração do código utilizando Bootstrap, garantindo uma estru
 
 O objetivo do projeto é criar uma experiência intuitiva para os usuários, permitindo fácil acesso a informações sobre turismo em diversos dispositivos.
 
-## Print da versão responsiva com CSS puro
-
-<<public/512 px.png>>
-<<public/853 px.png>>
-<<public/1280 px.png>>
+## Print da versão responsiva com CSS Puro
+![Versão CSS Puro - 512px](public/512px.png)
+![Versão CSS Puro - 853px](public/853px.png)
+![Versão CSS Puro - 1280px](public/1280px.png)
 
 ## Print da versão responsiva com Bootstrap
-
-<<public/540px.png>>
-<<public/853px.png>>
-<<public/1280px.png>>
+![Versão Bootstrap - 540px](public/540px.png)
+![Versão Bootstrap - 853px](public/853px.png)
+![Versão Bootstrap - 1280px](public/1280px.png)
