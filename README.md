@@ -21,8 +21,12 @@ O objetivo do projeto é criar uma experiência intuitiva para os usuários, per
 
 ## Print da versão responsiva com CSS puro
 
-<<  COLOQUE A IMAGEM AQUI >>
+<<public/512 px.png>>
+<<public/853 px.png>>
+<<public/1280 px.png>>
 
 ## Print da versão responsiva com Bootstrap
 
-<<  COLOQUE A IMAGEM AQUI >>
+<<public/540px.png>>
+<<public/853px.png>>
+<<public/1280px.png>>
