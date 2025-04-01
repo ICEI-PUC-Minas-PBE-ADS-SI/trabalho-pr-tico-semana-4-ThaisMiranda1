@@ -8,10 +8,16 @@ Nessa atividade,vamos evoluir o projeto para que a home-page funcione bem tanto 
 
 ## Informações Gerais
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Thaís Paula Miranda
+- Matricula: 878662
+- Proposta de projeto escolhida: Guia de Local Turistico.
+- Breve descrição sobre seu projeto: Este projeto consiste na criação de um Guia Turístico responsivo, que apresenta informações sobre destinos, atrações e dicas de viagem. O site foi desenvolvido em duas etapas:
+
+Versão 1.0: Responsividade implementada com CSS puro, utilizando media queries, flexbox e grid para adaptar o layout a diferentes tamanhos de tela.
+
+Versão 2.0: Refatoração do código utilizando Bootstrap, garantindo uma estrutura mais dinâmica e prática para a responsividade.
+
+O objetivo do projeto é criar uma experiência intuitiva para os usuários, permitindo fácil acesso a informações sobre turismo em diversos dispositivos.
 
 ## Print da versão responsiva com CSS puro
 
