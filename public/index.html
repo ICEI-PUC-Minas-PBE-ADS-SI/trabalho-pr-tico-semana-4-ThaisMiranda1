@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Guia de Lugares Turísticos</title>
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
@@ -70,6 +71,19 @@
                 <a href="imagem/Veneza.jpg" class="botao">Clique para ver a imagem</a>
             </article>
         </section>
+        
+        <!-- Seção da bandeira italiana -->
+        <div class="flag animate__animated" style="margin-top: 20px;">
+            <div class="stripe green"></div>
+            <div class="stripe white"></div>
+            <div class="stripe red"></div>
+        </div>
+
+        <script>
+            document.querySelector('.flag').addEventListener('click', function() {
+                this.classList.toggle('animate__bounce');
+            });
+        </script>
     </main>
 
     <footer>

@@ -5,11 +5,96 @@
     box-sizing: border-box;
 }
 
+.flag {
+    display: flex;
+    width: 300px; /* Largura total da bandeira */
+    height: 200px; /* Altura total da bandeira */
+    overflow: hidden;
+    margin: 20px auto; /* Centraliza a bandeira */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+.stripe {
+    flex: 1; /* Cada faixa ocupa uma parte igual */
+    transition: transform 0.5s ease; /* Transição suave para a animação */
+}
+
+.green {
+    background-color: #008C45; /* Verde */
+}
+
+.white {
+    background-color: #FFFFFF; /* Branco */
+}
+
+.red {
+    background-color: #CD212A; /* Vermelho */
+}
+
+.flag:hover .stripe {
+    transform: scale(1.1); /* Aumenta a faixa ao passar o mouse */
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    animation: fadeIn 0.5s ease-in-out;
+    margin: 20px 0; /* Espaçamento entre seções */
+}
+
+/* Efeito de hover para botões */
+.botao {
+    display: flex;
+    align-items: center; /* Alinha o texto verticalmente */
+    justify-content: center; /* Centraliza o texto horizontalmente */
+    padding: 10px 20px;
+    background-color: #17810d58; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transições suaves */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.botao:hover {
+    background-color: #044c03; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Aumenta o tamanho do botão */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+    filter: brightness(1.1); /* Aumenta o brilho do botão */
+}
+
+/* Efeito de zoom para imagens da galeria */
+.caixa-post img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.caixa-post img:hover {
+    transform: scale(1.1);
+}
+
 body {
     font-family: velista;
     margin: 0;
     padding: 0;
     background-color: #F7F2EB;
+}
+
+/* Efeito de hover para botões */
+.button:hover {
+    background-color: #ffcc00;
+    transform: scale(1.05);
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .banner {
@@ -30,25 +115,6 @@ body {
 .banner img:hover {
     transform: scale(1.04); /* Aumenta a imagem ao passar o mouse */
 }
-
-
-/*@keyframes scrollText {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(100%);
-    }
-}*/
-
-/*.marquee { ---> Futuras atualizações.
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-    animation: scrollText 5s infinite;
-    font-size: 24px;
-    font-weight: bold;
-}*/
 
 /* Estilos do Cabeçalho */
 header {
@@ -91,28 +157,35 @@ header {
 }
 
 .menu-pesquisa:hover {
-    display: flex;
     background-color: rgb(5, 146, 104);
     color: rgb(10, 1, 1);
-    gap: 1rem;
-  }
+}
 
 .menu-pesquisa:active {
-    display: flex;
-    background-color:#F7F2EB;
+    background-color: #F7F2EB;
     color: rgb(240, 240, 13);
-    gap: 1rem;
-}  
+}
 
 nav {
     display: flex;
     gap: 1rem;
+    animation: fadeIn 0.5s ease-in-out; /* Animação de entrada para o menu */
 }
 
 nav ul {
     display: flex;
     list-style-type: none;
     gap: 1rem;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.5s ease; /* Transição suave para a opacidade */
+}
+
+nav:hover ul {
+    opacity: 1; /* Torna visível ao passar o mouse */
+}
+
+nav ul li {
+    position: relative; /* Para o efeito de animação */
 }
 
 nav ul li a {
@@ -122,6 +195,13 @@ nav ul li a {
     text-decoration: none;
     color: #205834;
     background-color: #F7F2EB;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transições suaves */
+}
+
+nav ul li a:hover {
+    background-color: #d0e8d0; /* Cor de fundo ao passar o mouse */
+    transform: translateY(-3px); /* Efeito de elevação */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
 }
 
 /* Pesquisa */
@@ -144,13 +224,12 @@ nav ul li a {
     margin-left: 0.5rem;
     cursor: pointer;
     border: none;
-    background-color:#205834;
+    background-color: #205834;
     color: rgb(255, 255, 255);
     padding: 5px 10px;
     border-radius: 5px;
     transition: transform 0.3s;
 }
-
 
 /* Estilos do Conteúdo Principal */
 main {
@@ -160,23 +239,22 @@ main {
 
 main h1 {
     color: #A12B2D;
-    font-size: 3rem;
     font-weight: bold;
     text-align: center;
     font-family: velista;
+    font-size: 56px !important;
 }
 
-h4{
+h4 {
     font-family: velista;
     color: #A12B2D;
     font-size: 1.5rem;
     text-align: left;
-
 }
 
 main p {
     color: black;
-    font-size: 1.1rem;
+    font-size: 30px !important;
     margin-bottom: 2rem;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -193,7 +271,8 @@ section {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-/*Conteiner*/
+
+/* Container */
 .caixa-post {
     border: 2.2px solid #205834;
     padding: 1rem;
@@ -210,10 +289,9 @@ section {
     border-radius: 15px; /* Arredonda os cantos do contêiner */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s; /* Adiciona uma transição suave para o efeito */
-
 }
 
-.caixa-post img:hover{
+.caixa-post img:hover {
     transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
 }
 
@@ -227,7 +305,6 @@ a {
     justify-content: center;
     align-items: center;
     height: 2.2vh; /* Ajuste conforme necessário */
-
 }
 
 /* Estilos do Rodapé */
@@ -239,18 +316,14 @@ footer {
     border-top: 2px solid #000000;
 }
 
-
-/*Breakpoints para resoluções específicas(smartphones, tablets, dispositivos pequenos)*/
+/* Breakpoints para resoluções específicas (smartphones, tablets, dispositivos pequenos) */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-
-
-
-/* Breakpoints para tablets (até px) */
+/* Breakpoints para tablets (até 600px) */
 @media screen and (max-width: 600px) {
     header {
         display: flex; /* Usar flexbox para alinhamento */
@@ -272,12 +345,12 @@ footer {
         flex-direction: column; /* Direção da coluna */
         width: 100%;
         padding: 7px;
-        text-align: center;
+ text-align: center;
     }
 
     nav {
         display: flex; /* Certifique-se de que o flexbox está ativado */
-        flex-direction: block; /* Direção da coluna */
+        flex-direction: column; /* Direção da coluna */
         width: 90%;
         align-items: center;
         gap: 1.5rem; /* Espaçamento entre os itens */
@@ -348,31 +421,31 @@ footer {
     }
 }
 
-/* Breakpoints para desktops (até 1200px)*/
+/* Breakpoints para desktops (até 1200px) */
 @media screen and (max-width: 1200px) {
     header {
         padding: 20px;
     }
-    
+
     .logo img {
         width: 120px;
     }
-    
+
     nav {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
     }
-    
+
     main {
         padding: 2rem;
     }
-    
+
     main h1 {
         font-size: 3rem;
     }
-    
+
     main p {
         font-size: 1.2rem;
     }
